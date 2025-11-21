@@ -2,10 +2,19 @@
 Arch Linux is a lightweight, rolling-release Linux distribution that focuses on simplicity, minimalism, and giving the user full control. You start with a minimal system and install only what you need, using the pacman package manager and optionally the AUR (Arch User Repository) for community packages.
 
 # Important Paths and Their Roles in a Matugen Setup
+## Matugen
+├── config.toml
+└── templates
+    ├── colors.css
+    ├── gtk-colors.css
+    ├── hyprland-colors.conf
+    ├── kitty-colors.conf
+    └── rofi-colors.rasi
 
-## Matugen directory
+### Matugen directory
     ~/.config/matugen/
-## Matugen config directory
+    
+### Matugen config directory
     ~/.config/matugen/config.toml 
 Main Matugen configuration. Defines templates, output paths, wallpaper settings, and post hooks.
 
