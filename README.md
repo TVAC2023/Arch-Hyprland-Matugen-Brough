@@ -1,5 +1,113 @@
-# Background knowledge
+# Chapter 0: Background knowledge
+## Arch
 Arch Linux is a lightweight, rolling-release Linux distribution that focuses on simplicity, minimalism, and giving the user full control. You start with a minimal system and install only what you need, using the pacman package manager and optionally the AUR (Arch User Repository) Afor community packages.
+
+## Hyprland
+Hyprland is a dynamic tiling Wayland compositor.
+Its roles include:
+
+• Managing windows
+• Handling animations and layout
+• Controlling workspaces
+• Handling inputs (keyboard, mouse)
+• Loading its config from ~/.config/hypr/
+
+Hyprland supports loading external color files, which is why Matugen outputs a generated colors.conf into Hyprland’s config directory.
+When the file updates, Hyprland can be reloaded so the theme changes instantly.
+
+## Waybar
+Waybar is a customizable status bar for Wayland compositors.
+It displays modules like time, system info, Hyprland active window, workspaces, etc.
+
+Waybar uses two important files:
+
+• config.jsonc — module layout
+• style.css — styling and colors
+
+Your Matugen setup generates a colors.css file that contains variables (such as background, accent, foreground).
+Waybar’s style.css imports these color variables, so when Matugen regenerates colors.css, Waybar instantly updates after restart.
+
+## Kitty
+Kitty is a GPU-accelerated terminal emulator.
+It allows external color configuration, usually via an included colors.conf file.
+
+Matugen generates this colors.conf based on your wallpaper colors.
+Kitty reloads it when Matugen triggers a signal in its post hook.
+This lets your terminal theme change instantly with your wallpaper.
+
+## Swww
+
+Swww is a lightweight Wayland wallpaper program.
+Matugen uses it in your setup to set wallpapers.
+
+When you run something like:
+matugen image <path>
+Matugen passes arguments to swww to apply the wallpaper, optionally with transitions.
+Once applied, Matugen extracts your wallpaper’s colors and generates theme files for everything else.
+
+## GTK
+
+GTK is the UI toolkit used by many graphical applications such as Thunar, File Roller, and Gedit.
+Your setup includes a GTK template in Matugen, which outputs a CSS file containing themed colors.
+This controls how GTK apps appear, making them match your system-wide colors.
+## Matugen
+
+Matugen is the central piece of your theming setup.
+It reads colors from your wallpaper, then generates matching theme files for multiple programs.
+
+In your configuration, Matugen handles:
+
+• Reading the wallpaper
+• Extracting colors
+• Applying the wallpaper using swww
+• Writing new theme files from templates
+• Placing theme files in program-specific locations
+• Optionally reloading programs automatically (post hooks)
+
+Matugen templates define how each program receives these colors.
+Matugen outputs:
+
+• Hyprland colors
+• Waybar colors
+• Kitty colors
+• GTK colors
+• Rofi colors
+
+## How Everything Interacts in Your Configuration
+
+Below is the full pipeline of interaction, step by step.
+
+You run Matugen with a wallpaper image.
+
+Matugen sets the wallpaper using swww.
+
+Matugen extracts colors from that wallpaper.
+
+Matugen feeds those colors into templates for each program.
+
+Matugen produces color theme files:
+• ~/.config/hypr/colors.conf
+• ~/.config/waybar/colors.css
+• ~/.config/kitty/colors.conf
+• ~/.config/gtk-3.0/gtk.css
+• ~/.config/rofi/colors.rasi
+
+Matugen writes these files to the correct locations.
+
+Matugen runs post hooks if specified:
+• Hyprland reload
+• Waybar restart
+• Kitty reload
+• Thunar restart for GTK
+
+When the programs reload:
+• Hyprland windows adopt the new accent and background colors
+• Waybar modules now use the updated CSS variables
+• Kitty's terminal changes colors instantly
+• GTK apps adopt new accent, background, and foreground colors
+• Rofi menu matches the new theme
+
+Everything on your system now looks consistent and matches the wallpaper.
 
 # Important Paths and Their Roles in a Matugen Setup
 
