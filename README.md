@@ -2,7 +2,7 @@
 Arch Linux is a lightweight, rolling-release Linux distribution that focuses on simplicity, minimalism, and giving the user full control. You start with a minimal system and install only what you need, using the pacman package manager and optionally the AUR (Arch User Repository) for community packages.
 
 # Important Paths and Their Roles in a Matugen Setup
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------------------------------------------------------------------|
 ## Matugen
 
 ### Config Matugen directory
