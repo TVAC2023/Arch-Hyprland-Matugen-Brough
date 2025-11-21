@@ -10,6 +10,7 @@ Hyprland is a dynamic tiling Wayland compositor.
 Its roles include:
 
 • Managing windows
+
 • Handling animations and layout
 • Controlling workspaces
 • Handling inputs (keyboard, mouse)
