@@ -10,11 +10,11 @@ Arch Linux is a lightweight, rolling-release Linux distribution that focuses on 
 ```
 ├── config.toml
 └── templates
-├── colors.css
-├── gtk-colors.css
-├── hyprland-colors.conf
-├── kitty-colors.conf
-└── rofi-colors.rasi
+    ├── colors.css
+    ├── gtk-colors.css
+    ├── hyprland-colors.conf
+    ├── kitty-colors.conf
+    └── rofi-colors.rasi
 ```
 ### Matugen config directory
     ~/.config/matugen/config.toml 
