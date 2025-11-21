@@ -1,7 +1,10 @@
 # Chapter 0: Background knowledge
 ## Arch
-Arch Linux is a lightweight, rolling-release Linux distribution that focuses on simplicity, minimalism, and giving the user full control. You start with a minimal system and install only what you need, using the pacman package manager and optionally the AUR (Arch User Repository) Afor community packages.
+Arch Linux is a lightweight, rolling-release Linux distribution built around simplicity and user control.
+It provides only the bare minimum by default, and the user installs everything else manually.
+Key features include the pacman package manager, the AUR for community packages, and a user-driven configuration model.
 
+In your setup, Arch serves as the underlying system on which Hyprland, Waybar, Kitty, Swww, and Matugen all run.
 ## Hyprland
 Hyprland is a dynamic tiling Wayland compositor.
 Its roles include:
