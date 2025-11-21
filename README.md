@@ -4,7 +4,7 @@ Arch Linux is a lightweight, rolling-release Linux distribution that focuses on 
 # Important Paths and Their Roles in a Matugen Setup
 
 ## Matugen config directory
-###~/.config/matugen/
+### ~/.config/matugen/
 
 ###config.toml 
 → main Matugen configuration. Defines templates, output paths, wallpaper settings, and post hooks.
