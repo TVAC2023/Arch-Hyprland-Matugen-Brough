@@ -21,9 +21,9 @@ Arch Linux is a lightweight, rolling-release Linux distribution that focuses on 
 ### Matugen config directory
     ~/.config/matugen/config.toml 
 Main Matugen configuration. Defines templates, output paths, wallpaper settings, and post hooks.
-
+### Matugen Templates
     ~/.config/matugen/templates/ 
-contains all the template files for generating themes (Waybar, Kitty, hypr, etc).
+Contains all the template files for generating themes (Waybar, Kitty, hypr, etc).
 
 ## Hyprland config directory
 ### ~/.config/hypr/
