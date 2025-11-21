@@ -108,7 +108,7 @@ When the programs reload:
 
 Everything on your system now looks consistent and matches the wallpaper.
 
-# Important Paths and Their Roles in a Matugen Setup
+# Chapter 1: Paths and Their Roles in a Matugen Setup
 
 ## Matugen
 
