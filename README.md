@@ -9,12 +9,7 @@ In your setup, Arch serves as the underlying system on which Hyprland, Waybar, K
 Hyprland is a dynamic tiling Wayland compositor.
 Its roles include:
 
-• Managing windows
-
-• Handling animations and layout
-• Controlling workspaces
-• Handling inputs (keyboard, mouse)
-• Loading its config from ~/.config/hypr/
+Managing windows, Handling animations and layout, Controlling workspaces, Handling inputs (keyboard, mouse), Loading its config from ~/.config/hypr/
 
 Hyprland supports loading external color files, which is why Matugen outputs a generated colors.conf into Hyprland’s config directory.
 When the file updates, Hyprland can be reloaded so the theme changes instantly.
