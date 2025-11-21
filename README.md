@@ -13,10 +13,15 @@ templates/ → contains all the template files for generating themes (Waybar, Ki
 
 colors.conf → Matugen-generated colors for Hyprland. Your template in Matugen produces this file.
   hyprland.conf → Main Hyprland configuration (general settings, compositor settings, input, etc.).
+  
   hyprland.conf.save → Backup of your main config.
+  
   hyprpaper.conf → Wallpaper management for Hyprland.
+  
   monitors.conf → Monitor setup (resolution, refresh rate, arrangement).
+  
   workspaces.conf → Workspace definitions, names, and layouts.
+  
 How it works together
 
 Matugen reads the Hyprland template: ~/.config/matugen/templates/hyprland-colors.conf.
