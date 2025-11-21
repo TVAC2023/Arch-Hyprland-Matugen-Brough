@@ -60,82 +60,81 @@ output_path = '~/.config/gtk-3.0/gtk.css'
 post_hook = 'pkill Thunar; thunar & disown'
 </pre>
 ### Breakdown of config.toml
-[config.wallpaper]
+#### [config.wallpaper]
 This begins the wallpaper configuration section. Everything under this header tells Matugen how to handle setting your wallpaper.
 
-set = true
+#### set = true
 This tells Matugen to actually set your wallpaper after generating colors. If this were false, Matugen would generate colors but not change the wallpaper.
 
-command = "swww"
+#### command = "swww"
 This tells Matugen which program to use for applying the wallpaper. In your case, you're using swww.
 
-arguments = ["img", "--transition-type", "center"]
+#### arguments = ["img", "--transition-type", "center"]
 This lists the arguments Matugen will pass to swww when setting the wallpaper.
 The resulting command (with the wallpaper file added at the end) will look like:
 swww img --transition-type center <image>
 "img" tells swww to set an image.
 "--transition-type center" makes the transition animation originate from the center.
 
-[templates.kitty]
+#### [templates.kitty]
 This starts the section defining how Matugen should generate a color file for the Kitty terminal.
 
-input_path = '~/.config/matugen/templates/kitty-colors.conf'
+#### input_path = '~/.config/matugen/templates/kitty-colors.conf'
 This is the template file Matugen uses to generate the Kitty color configuration. It contains variables that get replaced with the generated colors.
 
-output_path = '~/.config/kitty/colors.conf'
+#### output_path = '~/.config/kitty/colors.conf'
 This is the file Matugen will write the generated colors into. Kitty will load this file as your theme.
 
-post_hook = 'kill -SIGUSR1 $(pgrep kitty)'
+#### post_hook = 'kill -SIGUSR1 $(pgrep kitty)'
 A command run after Matugen writes the new colors.
 Sending SIGUSR1 to Kitty makes it reload its colors without needing to restart the terminal.
 
-[templates.hyprland]
+#### [templates.hyprland]
 This section defines how Matugen generates Hyprland color config files.
 
-input_path
+#### input_path
 This is the template file for Hyprland colors.
 
-output_path
+#### output_path
 This is where the generated Hyprland color config is written.
 
-#post_hook = 'hyprctl reload'
+#### #post_hook = 'hyprctl reload'
 This is commented out, meaning unused. If you remove the #, Matugen would run "hyprctl reload" after generating colors, which forces Hyprland to reload its config.
 
-[templates.rofi]
+#### [templates.rofi]
 This defines how Matugen generates your Rofi theme colors.
 
-input_path
+#### input_path
 Template file for Rofi colors.
 
-output_path
+#### output_path
 The final Rofi color file that Rofi will use.
-
 No post_hook here, because Rofi only reads its theme when it's launched, so nothing needs to be reloaded.
 
-[templates.waybar]
+#### [templates.waybar]
 This controls how Matugen generates the colors for Waybar.
 
-input_path
+#### input_path
 Template file for Waybar colors (CSS).
 
-output_path
+#### output_path
 The CSS file Waybar will load to apply your theme.
 
-post_hook = 'pkill waybar; waybar & disown'
+#### post_hook = 'pkill waybar; waybar & disown'
 This restarts Waybar after updating the color file.
 "pkill waybar" stops the old instance.
 "waybar & disown" starts a new instance in the background.
 
-[templates.gtk]
+#### [templates.gtk]
 This controls GTK color generation. GTK colors affect applications like Thunar and anything using GTK3.
 
-input_path
+#### input_path
 The template file for GTK colors.
 
-output_path
+#### output_path
 The GTK CSS file Matugen overwrites with new colors.
 
-post_hook = 'pkill Thunar; thunar & disown'
+#### post_hook = 'pkill Thunar; thunar & disown'
 This closes Thunar and starts a new instance so the theme changes take effect immediately.
 
 ### Matugen Templates
