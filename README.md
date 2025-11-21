@@ -4,6 +4,7 @@ Arch Linux is a lightweight, rolling-release Linux distribution that focuses on 
 # Important Paths and Their Roles in a Matugen Setup
 ## Matugen
 ├── config.toml
+
 └── templates
     ├── colors.css
     ├── gtk-colors.css
