@@ -1,14 +1,16 @@
+# Background knowledge
+Arch Linux is a lightweight, rolling-release Linux distribution that focuses on simplicity, minimalism, and giving the user full control. You start with a minimal system and install only what you need, using the pacman package manager and optionally the AUR (Arch User Repository) for community packages.
 
 # Important Paths and Their Roles in a Matugen Setup
 
-# Matugen config directory
+## Matugen config directory
 ~/.config/matugen/
 
 config.toml → main Matugen configuration. Defines templates, output paths, wallpaper settings, and post hooks.
 
 templates/ → contains all the template files for generating themes (Waybar, Kitty, hypr, etc).
 
-# Hyprland config directory
+## Hyprland config directory
 ~/.config/hypr/
 
 colors.conf → Matugen-generated colors for Hyprland. Your template in Matugen produces this file.
@@ -36,7 +38,7 @@ This makes Hyprland use the Matugen theme automatically.
 Post hook in config.toml can reload Hyprland or just the compositor to apply changes:
 post_hook = 'hyprctl reload'
 
-# Waybar config directory
+## Waybar config directory
 ~/.config/waybar/
 
 colors.css → the Matugen-generated theme file. Waybar reads this for colors.
@@ -47,7 +49,7 @@ style.css → custom CSS for Waybar (borders, fonts, spacing, hover effects).
 
 scripts/launch.sh → optional launch script for Waybar.
 
-# Kitty config directory
+## Kitty config directory
 
 ~/.config/kitty/
 
