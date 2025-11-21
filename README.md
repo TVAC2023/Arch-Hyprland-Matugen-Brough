@@ -1,5 +1,5 @@
 # Background knowledge
-Arch Linux is a lightweight, rolling-release Linux distribution that focuses on simplicity, minimalism, and giving the user full control. You start with a minimal system and install only what you need, using the pacman package manager and optionally the AUR (Arch User Repository) for community packages.
+Arch Linux is a lightweight, rolling-release Linux distribution that focuses on simplicity, minimalism, and giving the user full control. You start with a minimal system and install only what you need, using the pacman package manager and optionally the AUR (Arch User Repository) Afor community packages.
 
 # Important Paths and Their Roles in a Matugen Setup
 
@@ -59,6 +59,7 @@ input_path = '~/.config/matugen/templates/gtk-colors.css'
 output_path = '~/.config/gtk-3.0/gtk.css'
 post_hook = 'pkill Thunar; thunar & disown'
 </pre>
+### Breakdown of config.toml
 [config.wallpaper]
 This begins the wallpaper configuration section. Everything under this header tells Matugen how to handle setting your wallpaper.
 
