@@ -15,7 +15,7 @@ Arch Linux is a lightweight, rolling-release Linux distribution that focuses on 
   ├── hyprland-colors.conf
   ├── kitty-colors.conf
   └── rofi-colors.rasi
-  '''
+'''
 ### Matugen config directory
     ~/.config/matugen/config.toml 
 Main Matugen configuration. Defines templates, output paths, wallpaper settings, and post hooks.
